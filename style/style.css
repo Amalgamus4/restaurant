@@ -1,0 +1,13 @@
+h1 {
+  color: blue;
+}
+
+#navBarList {
+  display: flex;
+  float: right;
+  list-style-type: none;
+}
+
+li {
+  margin: 10px;
+}
