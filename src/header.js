@@ -1,4 +1,4 @@
-const navbar = () => {
+export const navbar = (() => {
   function navBarContainer() {
     const element = document.createElement("div");
     element.id = "navBarContainer";
@@ -39,12 +39,12 @@ const navbar = () => {
     return element;
   }
 
-  document.body.appendChild(navBarContainer());
+  const content = document.getElementById("content");
+  document.body.insertBefore(navBarContainer(), content);
   document.getElementById("navBarContainer").appendChild(navBarList());
-  document.getElementById("navBarList").appendChild(home());
-  document.getElementById("navBarList").appendChild(menu());
-  document.getElementById("navBarList").appendChild(about());
-  document.getElementById("navBarList").appendChild(contact());
-};
-
-export default navbar;
+  const navbar = document.getElementById("navBarList");
+  navbar.appendChild(home());
+  navbar.appendChild(menu());
+  navbar.appendChild(about());
+  navbar.appendChild(contact());
+})();

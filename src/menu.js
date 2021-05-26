@@ -1,15 +1,10 @@
 // export a function that creates a div element, adds content, and
 // styles that element and then appends to DOM
+const menuItem1 = "Here's item 1";
 import navbar from "./header";
-import menuItem1 from "./content";
 
-function menuTab() {
+export const menuTab = (() => {
   const element = document.createElement("p");
-  element.textContent = menuItem1();
-  return element;
-}
-
-navbar();
-document.getElementById("content").appendChild(menuTab());
-
-export default menuTab;
+  element.textContent = menuItem1;
+  document.getElementById("content").appendChild(element);
+})();

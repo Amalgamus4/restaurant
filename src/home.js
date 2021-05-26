@@ -1,10 +1,10 @@
-import welcome from "./content";
+const welcome = "Welcome to the Restaurant!";
 import navbar from "./header";
 
-const homeTab = () => {
+export const homeTab = (() => {
   function heading() {
     const element = document.createElement("h1");
-    element.textContent = welcome();
+    element.textContent = welcome;
     return element;
   }
 
@@ -13,9 +13,6 @@ const homeTab = () => {
     element.src = "../images/restaurant-image.jpg";
     return element;
   }
-  navbar();
   document.getElementById("content").appendChild(heading());
   document.getElementById("content").appendChild(image());
-};
-
-export default homeTab;
+})();

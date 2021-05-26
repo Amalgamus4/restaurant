@@ -1,34 +1,29 @@
-import homeTab from "./home";
-import menuTab from "./menu";
-import aboutTab from "./about";
-import contactTab from "./contact";
+import { homeTab } from "./home";
+import { menuTab } from "./menu";
+import { aboutTab } from "./about";
+import { contactTab } from "./contact";
+import { navbar } from "./header";
 
-home();
-document.getElementById("home").addEventListener("click", goHome);
-document.getElementById("menu").addEventListener("click", goMenu);
-document.getElementById("about").addEventListener("click", goAbout);
-document.getElementById("contact").addEventListener("click", goContact);
+navbar;
+homeTab;
 
-function goHome() {
+document.getElementById("home").addEventListener("click", () => {
   clearPage();
-  homeTab();
-}
-
-function goMenu() {
+  homeTab;
+});
+document.getElementById("menu").addEventListener("click", () => {
   clearPage();
-  menuTab();
-}
-
-function goAbout() {
+  menuTab;
+});
+document.getElementById("about").addEventListener("click", () => {
   clearPage();
-  aboutTab();
-}
-
-function goContact() {
+  aboutTab;
+});
+document.getElementById("contact").addEventListener("click", () => {
   clearPage();
-  contactTab();
-}
-//when event listener fires, set DOM body to blank state
+  contactTab;
+});
 
-//tab switching logic, add event listeners to wipes out current contents
-// and then runs correct tab module to populate it again
+function clearPage() {
+  document.getElementById("content").innerHTML = "";
+}
