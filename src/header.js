@@ -1,4 +1,4 @@
-export const navbar = (() => {
+export default function navbar() {
   function navBarContainer() {
     const element = document.createElement("div");
     element.id = "navBarContainer";
@@ -47,4 +47,4 @@ export const navbar = (() => {
   navbar.appendChild(menu());
   navbar.appendChild(about());
   navbar.appendChild(contact());
-})();
+}

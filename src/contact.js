@@ -7,8 +7,8 @@ const contactInformation = {
   state: "USA",
   zip: "11111",
 };
-export const contactTab = (() => {
+export default function contactTab() {
   const element = document.createElement("p");
   element.innerHTML = `${contactInformation.tel} <br>  ${contactInformation.address} <br> ${contactInformation.city}, ${contactInformation.state}  ${contactInformation.zip}`;
   document.getElementById("content").appendChild(element);
-})();
+}

@@ -1,7 +1,7 @@
 const welcome = "Welcome to the Restaurant!";
 import navbar from "./header";
 
-export const homeTab = (() => {
+export default function homeTab() {
   function heading() {
     const element = document.createElement("h1");
     element.textContent = welcome;
@@ -15,4 +15,4 @@ export const homeTab = (() => {
   }
   document.getElementById("content").appendChild(heading());
   document.getElementById("content").appendChild(image());
-})();
+}

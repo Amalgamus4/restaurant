@@ -3,8 +3,8 @@
 const menuItem1 = "Here's item 1";
 import navbar from "./header";
 
-export const menuTab = (() => {
+export default function menuTab() {
   const element = document.createElement("p");
   element.textContent = menuItem1;
   document.getElementById("content").appendChild(element);
-})();
+}
