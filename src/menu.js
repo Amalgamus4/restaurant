@@ -1,26 +1,31 @@
 // export a function that creates a div element, adds content, and
 // styles that element and then appends to DOM
-const menuItem1 = "Chicken a la Stuff";
-const menuItem1Description =
-  "A delightful dish of chicken, cheese, and gummi bears";
+const menuItems = [
+  "The Boring One",
+  "The Everything but the Kitchen Sink One",
+  "The Spicy One",
+  "The Unusual One",
+];
 
-const menuItem2 = "Everything but the Kitchen Sink";
-const menuItem2Description = "Exactly what it sounds like";
+const descriptions = [
+  "Beef, cheese, and lettuce. Can you get any more plain?",
+  "Exactly what it sounds like.",
+  "Spicy chorizo, jalapenos, habanero sauce, and pepper jack cheese.",
+  "Do you really want to know?",
+];
 
 import navbar from "./header";
 
 export default function menuTab() {
-  const element = document.createElement("h3");
-  element.textContent = menuItem1;
-  const element2 = document.createElement("p");
-  element2.textContent = menuItem1Description;
-  document.getElementById("content").appendChild(element);
-  document.getElementById("content").appendChild(element2);
-
-  const element3 = document.createElement("h3");
-  element3.textContent = menuItem2;
-  const element4 = document.createElement("p");
-  element4.textContent = menuItem2Description;
-  document.getElementById("content").appendChild(element3);
-  document.getElementById("content").appendChild(element4);
+  const menuDisplay = document.createElement("div");
+  menuDisplay.id = "menuText";
+  document.getElementById("content").appendChild(menuDisplay);
+  for (let i = 0; i < menuItems.length; i++) {
+    const menuItem = document.createElement("h3");
+    menuItem.textContent = menuItems[i];
+    const description = document.createElement("p");
+    description.textContent = descriptions[i];
+    document.getElementById("menuText").appendChild(menuItem);
+    document.getElementById("menuText").appendChild(description);
+  }
 }

@@ -11,5 +11,6 @@ const contactInformation = {
 export default function contactTab() {
   const element = document.createElement("p");
   element.innerHTML = `Call us at ${contactInformation.tel} <br> <br> or stop by our downtown location <br> <br> ${contactInformation.address} <br> ${contactInformation.city}, ${contactInformation.state} &nbsp ${contactInformation.zip} <br> <br> You can also drop us a line at <a href="#">${contactInformation.email}</a>`;
+  element.id = "contactText";
   document.getElementById("content").appendChild(element);
 }
