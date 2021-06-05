@@ -17,9 +17,10 @@ const descriptions = [
 import navbar from "./header";
 
 export default function menuTab() {
-  const menuDisplay = document.createElement("div");
-  menuDisplay.id = "menuText";
-  document.getElementById("content").appendChild(menuDisplay);
+  const element = document.createElement("div");
+  element.id = "menuText";
+  element.setAttribute("class", "contentText");
+  document.getElementById("content").appendChild(element);
   for (let i = 0; i < menuItems.length; i++) {
     const menuItem = document.createElement("h3");
     menuItem.textContent = menuItems[i];

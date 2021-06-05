@@ -1,5 +1,12 @@
 export default function navbar() {
+  function navTag() {
+    const element = document.createElement("nav");
+    element.id = "nav";
+    return element;
+  }
+
   function navBarContainer() {
+    //open menu
     const element = document.createElement("div");
     element.id = "navBarContainer";
     return element;
@@ -40,7 +47,8 @@ export default function navbar() {
   }
 
   const content = document.getElementById("content");
-  document.body.insertBefore(navBarContainer(), content);
+  document.body.insertBefore(navTag(), content);
+  document.getElementById("nav").appendChild(navBarContainer());
   document.getElementById("navBarContainer").appendChild(navBarList());
   const navbar = document.getElementById("navBarList");
   navbar.appendChild(home());

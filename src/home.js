@@ -1,4 +1,4 @@
-const welcome = "Welcome to Little Devil Tacos!";
+const welcome = "Welcome to Torquey's Tacos!";
 import navbar from "./header";
 
 export default function homeTab() {
@@ -8,15 +8,5 @@ export default function homeTab() {
     return element;
   }
 
-  function image() {
-    const element = document.createElement("figure");
-    const image = document.createElement("img");
-    image.src = "../images/little-devil-small.jpg";
-    const caption = document.createElement("figcaption");
-    element.appendChild(image);
-    element.appendChild(caption);
-    return element;
-  }
   document.getElementById("content").appendChild(heading());
-  document.getElementById("content").appendChild(image());
 }

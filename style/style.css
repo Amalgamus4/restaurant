@@ -1,6 +1,7 @@
 h1 {
   color: red;
   margin-top: 0px;
+  text-align: center;
 }
 
 h3 {
@@ -9,27 +10,29 @@ h3 {
 
 #navBarList {
   display: flex;
-  direction: row;
-  list-style-type: none;
-  justify-content: flex-end;
+  flex-direction: row;
+  float: right;
+  font-size: 2rem;
+  margin: 0;
+  cursor: pointer;
+  height: 100%;
 }
 
 #navBarContainer {
+  display: flex;
+  justify-content: flex-end;
   width: 100%;
-  height: 40px;
+  height: 60px;
   background-color: red;
-}
-
-li {
-  margin: 10px;
-}
-li:hover {
-  border-bottom: 1px solid black;
+  margin: 0;
+  padding: 0;
 }
 
 #content {
-  height: 1339px;
+  height: 670px;
   background-image: url("../images/flames-small.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 p {
@@ -49,4 +52,30 @@ p {
 #aboutText {
   background-color: red;
   width: 500px;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+nav li {
+  display: inline-block;
+  padding: 20px 10px;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+nav li:hover {
+  background-color: #a3190f;
+}
+
+.contentText {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  text-align: center;
+  top: 20px;
+  width: 50%;
+  padding: 20px;
+  border-radius: 10px;
 }
