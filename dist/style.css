@@ -30,7 +30,7 @@ h3 {
 
 #content {
   height: 670px;
-  background-image: url("../images/flames-small.jpg");
+  background-image: url("/images/flames-small.jpg");
   background-repeat: no-repeat;
   background-position: center;
 }
